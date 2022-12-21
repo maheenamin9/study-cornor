@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-black">
+    <form method='POST' action=''>
+        {% csrf_token %}
+        <label for="message_body">Update the message</label>
+        {{ form.body }}
+        <input type="submit" value="update message" />
+      </form>
+</div>
+{% endblock content %}

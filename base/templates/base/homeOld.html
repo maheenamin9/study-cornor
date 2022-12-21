@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="flex">
+        <div>
+            {% include 'base/topicsComponent.html' %}
+        </div>
+        <div>
+            <h5>{{ roomCount }} rooms available</h5>
+            <a href="{% url 'createRoom' %}">Create Room</a>
+            {% include 'base/feedComponent.html' %}
+        </div>
+        <div>
+            {% include 'base/activityComponent.html' %}
+        </div>
+    </div>
+{% endblock content %}
